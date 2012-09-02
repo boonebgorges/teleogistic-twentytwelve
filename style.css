@@ -17,6 +17,7 @@ h2,
 h3,
 h4 {
 	font-family: "Quando", serif;
+	font-weight: normal;
 }
 
 a.bbg-links {
@@ -80,6 +81,14 @@ a.bbg-links {
 }
 .widget li {
 	margin-left: 16px;
+}
+.widget-title {
+	font-weight: normal;
+	font-size: 1rem;
+	text-transform: none;
+}
+.widget-area .widget h3 {
+	margin-bottom: .2rem;
 }
 
 /* Media queries */
