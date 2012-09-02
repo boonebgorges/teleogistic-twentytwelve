@@ -1,0 +1,32 @@
+/*
+Theme name: Teleogistic
+Template: twentytwelve
+*/
+
+@import url('../twentytwelve/style.css');
+
+body {
+	background: #0b4a65;
+}
+
+.title-meta {
+	margin: 10px 0;
+	font-size: .9em;
+}
+.title-meta a, .entry-meta a, .widget-area .widget a {
+	color: #b88346;
+	text-decoration: none;
+}
+	.title-meta a:hover,
+	.title-meta a:active,
+	.entry-meta a:hover,
+	.entry-meta a:active {
+		color: #444;
+	}
+
+.widget ul {
+	list-style-type: circle;
+}
+.widget li {
+	margin-left: 16px;
+}
