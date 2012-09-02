@@ -38,6 +38,7 @@ a.bbg-links {
 	clear: both;
 }
 #masthead hgroup {
+	border-bottom: 1px solid #ededed;
 	width: 400px;
 	float: left;
 }
