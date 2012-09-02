@@ -46,6 +46,9 @@ a.bbg-links {
 	float: right;
 	margin-top: 0;
 }
+.main-navigation li:last-child {
+	margin-right: 0;
+}
 
 @media screen and (max-width: 600px) {
 	.main-navigation {
@@ -62,7 +65,10 @@ a.bbg-links {
 	margin: 10px 0;
 	font-size: .9em;
 }
-.title-meta a, .entry-meta a, .widget-area .widget a {
+.title-meta a,
+.entry-meta a,
+.widget-area .widget a,
+.main-navigation li a {
 	color: #b88346;
 	text-decoration: none;
 }
