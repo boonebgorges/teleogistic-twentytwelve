@@ -33,6 +33,31 @@ a.bbg-links {
 		background: url('img/github.png') no-repeat;
 	}
 
+#masthead {
+	overflow: hidden;
+	clear: both;
+}
+#masthead hgroup {
+	width: 300px;
+	float: left;
+}
+
+.main-navigation {
+	float: right;
+	margin-top: 0;
+}
+
+@media screen and (max-width: 600px) {
+	.main-navigation {
+		float: none;
+	}
+	#masthead hgroup {
+		margin: 0 auto;
+		float: none;
+		margin-bottom: 20px;
+	}
+}
+
 .title-meta {
 	margin: 10px 0;
 	font-size: .9em;
