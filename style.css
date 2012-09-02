@@ -16,6 +16,23 @@ h4 {
 	font-family: "Quando", serif;
 }
 
+a.bbg-links {
+	display: block;
+	text-indent: -999em;
+	height: 75px;
+	width: 75px;
+	float: left;
+}
+	#bbg-twitter {
+		background: url('img/twitter.png') no-repeat;
+	}
+	#bbg-wordpress {
+		background: url('img/wordpress.png') no-repeat;
+	}
+	#bbg-github {
+		background: url('img/github.png') no-repeat;
+	}
+
 .title-meta {
 	margin: 10px 0;
 	font-size: .9em;
