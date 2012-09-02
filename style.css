@@ -50,17 +50,6 @@ a.bbg-links {
 	margin-right: 0;
 }
 
-@media screen and (max-width: 600px) {
-	.main-navigation {
-		float: none;
-	}
-	.site-header hgroup {
-		margin: 0 auto;
-		float: none;
-		margin-bottom: 20px;
-	}
-}
-
 #main {
 	border-top: 1px solid #ededed;
 }
@@ -89,3 +78,17 @@ a.bbg-links {
 .widget li {
 	margin-left: 16px;
 }
+
+/* Media queries */
+@media screen and (max-width: 600px) {
+	.main-navigation {
+		float: none;
+	}
+	.site-header hgroup {
+		margin: 0 auto;
+		float: none;
+		margin-bottom: 20px;
+		width: auto;
+	}
+}
+
