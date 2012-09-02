@@ -33,12 +33,11 @@ a.bbg-links {
 		background: url('img/github.png') no-repeat;
 	}
 
-#masthead {
+.site-header {
 	overflow: hidden;
 	clear: both;
 }
-#masthead hgroup {
-	border-bottom: 1px solid #ededed;
+.site-header hgroup {
 	width: 400px;
 	float: left;
 }
@@ -55,11 +54,15 @@ a.bbg-links {
 	.main-navigation {
 		float: none;
 	}
-	#masthead hgroup {
+	.site-header hgroup {
 		margin: 0 auto;
 		float: none;
 		margin-bottom: 20px;
 	}
+}
+
+#main {
+	border-top: 1px solid #ededed;
 }
 
 .title-meta {
