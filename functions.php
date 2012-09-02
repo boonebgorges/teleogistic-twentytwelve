@@ -55,3 +55,10 @@ function teleogistic_title_meta() {
 
 	echo $date;
 }
+
+function teleogistic_fonts() {
+	wp_dequeue_style( 'twentytwelve-fonts' );
+	$protocol = is_ssl() ? 'https' : 'http';
+	wp_enqueue_style( 'teleogistic-fonts', "$protocol://fonts.googleapis.com/css?family=Quando", array(), null );
+}
+add_action( 'wp_enqueue_scripts', 'teleogistic_fonts', 11 );
