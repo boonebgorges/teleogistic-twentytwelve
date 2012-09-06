@@ -112,3 +112,4 @@ function teleogistic_process_quotes( $content ) {
 	return $content;
 }
 add_filter( 'the_content', 'teleogistic_process_quotes', 5 );
+add_filter( 'get_comment_text', 'teleogistic_process_quotes', 5 );
