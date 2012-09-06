@@ -62,3 +62,53 @@ function teleogistic_fonts() {
 	wp_enqueue_style( 'teleogistic-fonts', "$protocol://fonts.googleapis.com/css?family=Quando", array(), null );
 }
 add_action( 'wp_enqueue_scripts', 'teleogistic_fonts', 11 );
+
+/**
+ * Turn email-style quotes into blockquotes
+ *
+ * For example:
+ *
+ *   My friend said:
+ *
+ *   > You are handsome and also
+ *   > you are very great
+ *
+ *   Then she said:
+ *
+ *   > You are my hero
+ *
+ * becomes
+ *
+ *   My friend said:
+ *
+ *   <blockquote>You are handsome and also you are very great</blockquote>
+ *
+ *   Then she said:
+ *
+ *   <blockquote>You are my hero</blockquote>
+ */
+function teleogistic_process_quotes( $content ) {
+	// Find blank lines
+	$content = preg_replace( '/\n\s*\n/m', '<BBG_EMPTY_LINE>', $content );
+
+	// Explode on the blank lines
+	$content = explode( '<BBG_EMPTY_LINE>', $content );
+
+	foreach ( $content as &$c ) {
+		$c = trim( $c );
+
+		// Reduce multiple-line quotes to a single line
+		// This works because the first > in a block will not have a
+		// line break before it
+		$c = preg_replace( '/\n(>|&gt;)(.*)/m', '$2', $c );
+
+		// Blockquote 'em
+		$c = preg_replace( '/^(>|&gt;) (.*)/m', '<blockquote>$2</blockquote>', $c );
+	}
+
+	// Put everything back as we found it
+	$content = implode( '', $content );
+
+	return $content;
+}
+add_filter( 'the_content', 'teleogistic_process_quotes', 5 );
