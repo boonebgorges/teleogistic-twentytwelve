@@ -91,6 +91,11 @@ a.bbg-links {
 	margin-bottom: .2rem;
 }
 
+.comment-content blockquote {
+	padding: 1rem 1.71429rem 0.1rem;
+	line-height: 2em;
+}
+
 /* Media queries */
 @media screen and (max-width: 600px) {
 	.main-navigation {
