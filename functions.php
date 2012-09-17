@@ -107,7 +107,7 @@ function teleogistic_process_quotes( $content ) {
 	}
 
 	// Put everything back as we found it
-	$content = implode( '', $content );
+	$content = implode( "\n\n", $content );
 
 	return $content;
 }
