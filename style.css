@@ -96,6 +96,15 @@ a.bbg-links {
 	line-height: 2em;
 }
 
+.wp-caption.alignright {
+	margin-left: 20px;
+}
+
+/* For gists */
+.entry-content .gist pre {
+	line-height: inherit;
+}
+
 /* Media queries */
 @media screen and (max-width: 600px) {
 	.main-navigation {
